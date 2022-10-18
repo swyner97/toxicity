@@ -1,8 +1,12 @@
 const router = require('express').Router();
-const htmlRoutes = require('./html-routes');
-// const projectRoutes = require('./projectRoutes');
+
+const htmlRoutes = require('./html-routes.js');
+const apiRoutes = require('./api');
+const profileRoutes = require('./profileDash.js');
 
 router.use('/', htmlRoutes);
-// router.use('/projects', projectRoutes);
+router.use('/api', apiRoutes);
+router.use('/profile',profileRoutes)
+
 
 module.exports = router;
