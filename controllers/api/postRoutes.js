@@ -3,7 +3,7 @@ const { Post } = require('../../models/');
 const withAuth = require('../../utils/auth');
 const toxicity = require('@tensorflow-models/toxicity');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     const body = req.body.body;
     const sentences = body.split('. ');
     console.log(sentences)
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
                     return res.json("Post wasn't bitchy enough!")
                 }
             }
-            const joinArr = sentences.join('.');
+            const joinArr = sentences.join('. ');
 
             Post.create({ joinArr, userId: req.session.userId }).then(newPost => {
             
@@ -30,22 +30,7 @@ router.post('/', async (req, res) => {
 
         })
     })
-
-
-    // if (accepted) {
-    //     const joinArr = splitArr.join('. ');
-    //     try {
-    //         const newPost = await Post.create({ joinArr, userId: req.session.userId });
-    //         res.json(newPost);
-    //     } catch (err) {
-    //         res.status(500).json(err);
-    //     }
-    // } else {
-    //     res.json("Post wasn't bitchy enough!")
-    // }
 });
-
-
 
 
 router.put('/:id', withAuth, async (req, res) => {
