@@ -1,22 +1,13 @@
-const button = document.getElementById("runaway-btn");
+// var runaway_btn = document.querySelector
+// ("#runaway_btn");
 
-const animateMove = (element, prop, pixels) =>
-  anime({
-    targets: element,
-    [prop]: `${pixels}px`,
-    easing: "easeOutCirc"
-  });
-
-["mouseover", "click"].forEach(function (el) {
-  button.addEventListener(el, function (event) {
-    const top = getRandomNumber(window.innerHeight - this.offsetHeight);
-    const left = getRandomNumber(window.innerWidth - this.offsetWidth);
-
-    animateMove(this, "left", left).play();
-    animateMove(this, "top", top).play();
-  });
-});
-
-const getRandomNumber = (num) => {
-  return Math.floor(Math.random() * (num + 1));
-};
+// runaway_btn.addEventListener("mouseenter", function () {
+//   if (runaway_btn.classList.contains("move-away")) {
+//     runaway_btn.classList.remove("move-away");
+//     runaway_btn.classList.add("button");
+//   } else if (runaway_btn.classList.contains("button")) {
+//     runaway_btn.classList.remove("button");
+//     runaway_btn.classList.add("move-away");
+//   }
+//   }
+// );
