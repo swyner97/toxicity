@@ -21,12 +21,12 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/new', withAuth, (req, res) => {
-  res.render('new-post', {
+router.get('/new',withAuth, (req, res) => {
+  res.render('newPost', {
     layout: 'profileDash',
   });
 });
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -38,7 +38,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profileDash', {
       ...user,
-      logged_in: true
+      loggedIn: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -54,7 +54,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       const post = postData.get({ plain: true });
 
       res.render('edit-post', {
-        layout: 'dashboard',
+        layout: 'profileDash',
         post,
       });
     } else {

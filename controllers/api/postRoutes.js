@@ -23,50 +23,49 @@ router.post('/', withAuth, async (req, res) => {
             }
             const joinArr = sentences.join('. ');
 
-            Post.create({ joinArr, userId: req.session.userId }).then(newPost => {
-            
-            res.json(newPost);
+            Post.create({ title: req.body.title, body: joinArr, userId: req.session.userId })
+            .then(newPost => {
+                res.json(newPost)
             })
 
         })
     })
 });
 
-
-router.put('/:id', withAuth, async (req, res) => {
+  router.put('/:id', withAuth, async (req, res) => {
     try {
-        const [affectedRows] = await Post.update(req.body, {
-            where: {
-                id: req.params.id,
-            },
-        });
-
-        if (affectedRows > 0) {
-            res.status(200).end();
-        } else {
-            res.status(404).end();
-        }
+      const [affectedRows] = await Post.update(req.body, {
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (affectedRows > 0) {
+        res.status(200).end();
+      } else {
+        res.status(404).end();
+      }
     } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json(err);
     }
-});
-
-router.delete('/:id', withAuth, async (req, res) => {
+  });
+  
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
-        const [affectedRows] = Post.destroy({
-            where: {
-                id: req.params.id,
-            },
-        });
-
-        if (affectedRows > 0) {
-            res.status(200).end();
-        } else {
-            res.status(404).end();
-        }
+      const [affectedRows] = Post.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (affectedRows > 0) {
+        res.status(200).end();
+      } else {
+        res.status(404).end();
+      }
     } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json(err);
     }
-});
-
-module.exports = router;
+  });
+  
+  module.exports = router;
