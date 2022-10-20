@@ -17,22 +17,29 @@
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Dashboard</title>
   </head>
-  
+
   <body>
-    <a class="logout" href="./login.html">Logout</a>
-    <div class="is-flex is-flex-direction-column is-align-content-center">
-      <div class="is-flex is-justify-content-center toggle opacity">
-       <button><a class="toggle-btn"  href="./homepage.html">Dashboard</a></button> 
-       <button>  <a class="toggle-btn" href="./profile.html">Profile</a>
+    <div
+      class="new-user is-flex is-justify-content-center is-flex-direction-column is-align-items-center input-form"
+    >
+      <div>
+        <button class="new-user-btn">Login</button>
+        <button class="new-user-btn">Sign Up</button>
       </div>
-</button>
-      
-      <div class="is-flex is-flex-direction-row is-justify-content-center  opacity">
-        <div class="anon">
-          <h1>ANON</h1>
-        </div>
-        <input type="text" placeholder="type something..." />
-        <div><button id="post-btn">Post</button></div>
+
+      <div class="opacity is-flex is-flex-direction-column is-align-items-flex-start new-user-wrapper">
+        <h2>Email:</h2>
+        <input
+          class="new-user-input"
+          type="text"
+          placeholder="yourstupidemail@aol.com"
+        />
+        <h2>Password:</h2>
+        <input
+          type="password"
+          class="new-user-input"
+          placeholder="Make a password"/>
+        <button class="submit-btn">Create!</button>
       </div>
     </div>
   </body>
