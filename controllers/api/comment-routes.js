@@ -18,12 +18,12 @@ router.post('/', withAuth, async (req, res) => {
                 console.log('testing: ', truthy)
             
                 if (!truthy) {
-                    return res.json("Comment wasn't bitchy enough!")
+                    return res.status(500).json("Comment wasn't bitchy enough!")
                 }
             }
             const joinArr = sentences.join('. ');
 
-            Comment.create({ title: req.body.title, body: joinArr, userId: req.session.userId })
+            Comment.create({ body: joinArr, userId: req.session.userId, postId: req.body.postId })
             .then(commentNewPost => {
                 res.json(commentNewPost)
             })
