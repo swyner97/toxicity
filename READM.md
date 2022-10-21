@@ -16,8 +16,16 @@ When I access the dashboard, I am able to make pseudonymous posts and topics.
 When I want to react, I have the choice to give a red flag, thumbs down, thumbs up, fire emoji and the devil. 
 The cursor will be a pitchfork.
 
-you said it you meant it >:) ==> fun delete button.
 
+
+Technologies Used:
+Javascript
+HTML
+CSS
+Bootstrap
+Tensorflow toxicity 
+Express.js
+MySql
 
 
 Screenshot of Website:
@@ -25,7 +33,9 @@ Screenshot of Website:
 
 
 
-Links:
 
-Links: 
+Link 1:
+
+
+Link 2: 
 
