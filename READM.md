@@ -2,7 +2,7 @@
 # toxicity
 
 Description:
-An application that allows an anonymous safe line of communication in your local area. A social platform that will allow the user to create an account privately and allow to express toxic posts/behavior in a local forum to share with many other users worldwide. 
+A pseudonymous social media application that allows an anonymous safe line of communication in your local area. A social platform that will allow the user to create an account privately and allow to express toxic posts/behavior in a local forum to share with many other users worldwide. 
 
 User Story:
 As a user, when I open the application, I am presented with anonymous posts in my area and the option to create or login to a social account. 
