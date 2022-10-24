@@ -322,6 +322,7 @@ input {
   /* background: rgb(0,0,0); */
   /* background: black; */
   display: flexbox;
+
   /* align-items: baseline; */
   flex-wrap: wrap;
   color: white;
@@ -353,7 +354,8 @@ list-style: none;
 /* }  */
 
 .sidebarOption {
-  display: flex;
+  display:flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   font-weight: 800;
@@ -427,7 +429,7 @@ list-style: none;
 }
 
 body {
-  display: flex;
+  display: column;
   /* height: 100vh; */
   /* max-width: 1300px; */
   margin-left: auto;
@@ -798,7 +800,8 @@ ul#profile-Arrange {
 }
 
 div.banner {
-  width: 92%;
+  font-size:xx-large;
+  width: 100%;
   height: 380px;
   margin-right: 3%;
   margin-left: 2%;
@@ -806,7 +809,7 @@ div.banner {
   /* display: flex; */
   align-items: center;
   justify-content: center;
-  /* background: #6a0000; */
+  background: #6a0000;
   background-image:url("./images/toxic.webp");
   height: 250px; /* You must set a specified height */
 background-position: 100%;
@@ -835,12 +838,17 @@ background:none;
 
 
 
-.h1 {
-  display:block;
+h1 {
+  display:flex;
 flex-direction:column;
   align-items:center;
+  background: #6a0000;
 
   
+}
+span-1{
+
+  background-color: #6a0000;
 }
 
 .twitter-tweet {

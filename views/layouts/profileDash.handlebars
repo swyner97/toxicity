@@ -9,29 +9,32 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="flex-column min-100-vh">
-  <nav class="sidebar">
-    <ul class="sidebar">
-      <li class="sidebarOption"><a href="/">HELL</a></li>
-      <li class="sidebarOption"><a href="/profile">Profile</a></li>
-     <li class="sidebarOption"> <a href="/profile/new">Create</a></li>
-      <li class="sidebarOption"><a href="#" id="logout-link">Logout</a></li>
-    </ul>
-  </nav>
-  <header class="hero">
-    <h1 class="app-title"><a href="/profile">My Toxins</a></h1>
-  </header>
-
-
-
-  <footer class="footer flex-row justify-center">
+  <div class="banner">
+   <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/homepage.html#">
+  <h1>TOXICITY<span>&#9763;</span></h1></a>
+  </div>
     
-  </footer>
-</body>
+      <div class="sidebarOption active">
+       
+        <a href="/">
+        <h2>HELL!</h2></a>
+      {{!-- </div>
 
+      <div class="sidebarOption"> --}}
+      
+        <a href="/profile">
+        <h2>Profile</h2></a>
+              <a class="sidebarOption"><a href="/login">Login</a></a>
+      <a class="sidebarOption"><a href="#" id="logout-ank">Logout</a></a>
+      </div>
+
+     
+    </div>
+    
+<script src="/js/login.js"></script>
 <script src="/js/logout.js"></script>
 
-</html>
+{{!-- </html> --}}
           {{!-- <div class="posts list-group">
   {{#each posts}}
   <div class="post__headerDescription">
@@ -89,7 +92,7 @@
                     <a href="#">Andre</a>
                 </div> -->
                 <span>
-                    <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/profile.html#">@<span>AndresToxins</span></a>
+                    <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/profile.html#">@<span>TOXICANONYMOUS</span></a>
                 </span>
             </div>
             <div id="profile-state">
@@ -122,7 +125,7 @@
         </div>
     </div>
   <!-- sidebar starts -->
-  <div class="sidebar">
+  {{!-- <div class="sidebar">
 
     <h1 class="toxic icon-2x"><span>☣</span></h1>
     <div class="sidebarOption active">
@@ -138,7 +141,7 @@
             <div class="sidebarOption">
    
       <a href="/profile/new">
-        <h2>Create</h2></a>
+        <h2>Create</h2></a> --}}
 
   <!-- sidebar ends -->
 
@@ -286,6 +289,7 @@
   <script href="./assets/js/index.js"></script>
   <script src="/js/signup.js"></script>
 <script src="/js/logout.js"></script>
+<script src="/js/login.js"></script>
         <script src="../toxicity.js"></script>
         <script src="/js/new.js"></script>
   </body>
