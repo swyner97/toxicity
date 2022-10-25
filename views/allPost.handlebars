@@ -1,8 +1,217 @@
-<div class="posts list-group">
+
+
+ <!-- sidebar starts -->
+    {{!-- <div class="sidebar">
+      <div class="wrapper">
+        <a class="profile-bg main-wrapper d-block"></a>
+        <div>
+            <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/profile.html#" id="profile-ank">
+          
+            </a>
+            <div id="profile-marg">
+                <!-- <div id="profile-name">
+                    <a href="#">Andre</a>
+                </div> -->
+                <span>
+                    <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/profile.html#">@<span>AndresToxins</span></a>
+                </span>
+            </div>
+            <div id="profile-state">
+                <ul id="profile-Arrange">
+                  <a id="profile-details">
+                      <a href="#">
+                          <span class="d-block" id="profile-label">Toxins</span>
+                          <span id="profile-number">
+                              9.840
+                          </span>
+                      </a>
+                  </a>
+                  <a id="profile-details">
+                      <a href="#">
+                          <span class="d-block" id="profile-label">Stalking</span>
+                          <span id="profile-number">
+                              885
+                          </span>
+                      </a>
+                  </a>
+                  <a id="profile-details">
+                      <a href="#">
+                          <span class="d-block" id="profile-label">Losers</span>
+                          <span id="profile-number">
+                              3.100.810
+                      </span></a>
+                  </a>
+                </ul>
+            </div>
+        </div>
+    </div> --}}
+   
+  <div class="banner">
+   <a href="file:///C:/Users/andre/Desktop/toxicity/mockups/homepage.html#">
+  <h1>TOXICITY<span>&#9763;</span></h1></a>
+  </div>
+    
+      <div class="sidebarOption active">
+       
+        <a href="/">
+        <h2>HELL!</h2></a>
+      </div>
+
+      <div class="sidebarOption">
+      
+        <a href="/profile">
+        <h2>Profile</h2></a>
+        </div>
+
+      <div class="sidebarOption">
+
+              <a class="sidebarOption"><a href="/login">Login</a></a>
+                  </div>
+
+      <div class="sidebarOption">
+      <a class="sidebarOption"><a href="#" id="logout-ank">Logout</a></a>
+      </div>
+
+     
+    </div>
+    
+    <!-- sidebar ends -->
+    
+
+    <!-- feed starts -->
+    <div class="feed">
+      <div class="feed__header">
+        <h1>WHY ARE YOU HERE!? DUMBASS!!</h1>
+      </div>
+    
+
+      <!-- tweetbox starts -->
+    <div class="tweetBox">
+  <form id="new-post-form" class="card-body">
+
+    <div class="tweetbox__input">
+      <label class="form-label" for="post-title">Title</label>
+      <input type="text" name="post-title" class="form-input" placeholder="☣ " />
+
+      <label class="form-label" for="post-body">Content</label>
+
+      <input
+        name="post-body"
+        class="form-input"
+        type="text"
+        placeholder="What's your problem!? ☣ "
+      />
+    </div>
+    <button type="submit" class="tweetBox__tweetButton">SAY IT!</button>
+
+    <button class="button" id="runaway_btn">TRASH IT!</button>
+  </form>
+</div>
+
+
+
+      <!-- post starts -->
+      {{!-- <div class="post">
+        <div class="post__avatar">
+          <img
+            src="./assets/images/user.jpg"
+            alt=""
+          />
+        </div> --}}
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h1>
+            {{username}}
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> TOXINBOARD </span>{{username}}</span
+                >
+              </h1>
+            </div>
+            
+          </div>
+          <img
+            src="./assets/images/image.jpg"
+            alt=""
+          />
+       
+          <div class="posts ast-group">
   {{#each posts}}
-    <a class="list-item flex-row justify-space-between" href="/post/{{id}}">
+  <div class="post__headerDescription">
+              <p>You said it, you MEAN IT!!</p>
+            </div>
+    <a class="ast-item flex-row justify-space-between" href="/post/{{id}}">
       <span>{{title}}</span>
       <span>{{format_date createdAt}}</span>
     </a>
   {{/each}}
+   {{#if post.Comments}}
+   <div class="post">
+  <article class="card">
+    <div class="card-header flex-row justify-space-between">
+      <h2>{{post.title}}</h2>
+      <div>
+        Posted by {{post.User.username}} on {{format_date post.createdAt}}
+      </div>
+    </div>
+    <div class="card-body">
+      {{post.body}}
+    </div>
+  </article>
+    <section class="card">
+      <div class="card-header">
+        <h3>Comments</h3>
+      </div>
+
+      <div class="card-body">
+        {{#each post.Comments}}
+          <div>
+            <p>
+              {{body}}
+            </p>
+            <p>
+              &mdash; {{User.username}}, {{format_date createdAt}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
+   
 </div>
+
+</div>
+
+         
+        </div>
+      </div>
+      <!-- post ends -->
+    </div>
+    <!-- feed ends -->
+
+    <!-- widgets starts -->
+    {{!-- <div class="widgets">
+      <div class="widgets__input">
+        <span class="material-icons widgets__searchIcon"></span>
+        <input type="text" placeholder="Search Toxins" />
+      </div> --}}
+
+    
+    </div>
+        <div class="widgets__widgetContainer">
+        <h2>Most Toxic Pages</h2>
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I VOTED 🇺🇸 <a href="https://t.co/hlgIJUST4x">pic.twitter.com/hlgIJUST4x</a></p>&mdash; ye (@kanyewest) <a href="https://twitter.com/kanyewest/status/1323730046125699072?ref_src=twsrc%5Etfw">November 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Recording The System 🎙️New episode is out now. <a href="https://t.co/1TYi1yQFnp">https://t.co/1TYi1yQFnp</a> <a href="https://t.co/6UimL7lvO4">pic.twitter.com/6UimL7lvO4</a></p>&mdash; Kim Kardashian (@KimKardashian) <a href="https://twitter.com/KimKardashian/status/1582052778062491649?ref_src=twsrc%5Etfw">October 17, 2022</a></blockquote>
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Jared Fogle has happily passed away! RIP Bozo 😂 <a href="https://t.co/DS4wCh4PWj">pic.twitter.com/DS4wCh4PWj</a></p>&mdash; Anything Bot (@anythingbott) <a href="https://twitter.com/anythingbott/status/1562950710303420416?ref_src=twsrc%5Etfw">August 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Is everyone enjoying <a href="https://twitter.com/hashtag/RHOC?src=hash&amp;ref_src=twsrc%5Etfw">#RHOC</a> so far? <a href="https://twitter.com/TamraBarney?ref_src=twsrc%5Etfw">@TamraBarney</a> <a href="https://t.co/IQfx199T3M">pic.twitter.com/IQfx199T3M</a></p>&mdash; The Real Housewives! (@BravoRealWives) <a href="https://twitter.com/BravoRealWives/status/1043510055327490049?ref_src=twsrc%5Etfw">September 22, 2018</a></blockquote> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    <!-- widgets ends -->
+    <script src="https://code.jquery.com/jquery-3.5.1.sam.min.js"></script>
+<script src="https://cdn.jsdeavr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/new.js"></script>
+<script src="/js/comment.js"></script>
