@@ -2,7 +2,7 @@
 # toxicity
 
 Description:
-An application that allows an anonymous safe line of communication in your local area. A social platform that will allow the user to create an account privately and allow to express toxic posts/behavior in a local forum to share with many other users worldwide. 
+A pseudonymous social media application that allows an anonymous safe line of communication in your local area. A social platform that will allow the user to create an account privately and allow to express toxic posts/behavior in a local forum to share with many other users worldwide. 
 
 User Story:
 As a user, when I open the application, I am presented with anonymous posts in my area and the option to create or login to a social account. 
@@ -16,8 +16,16 @@ When I access the dashboard, I am able to make pseudonymous posts and topics.
 When I want to react, I have the choice to give a red flag, thumbs down, thumbs up, fire emoji and the devil. 
 The cursor will be a pitchfork.
 
-you said it you meant it >:) ==> fun delete button.
 
+
+Technologies Used:
+Javascript
+HTML
+CSS
+Bootstrap
+Tensorflow toxicity 
+Express.js
+MySql
 
 
 Screenshot of Website:
@@ -25,7 +33,9 @@ Screenshot of Website:
 
 
 
-Links:
 
-Links: 
+Link 1:
+
+
+Link 2: 
 
