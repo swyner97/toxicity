@@ -1,10 +1,6 @@
 
 document.querySelector('#createprofile').addEventListener('submit', (e) => {
     e.preventDefault()
-    const needed_funding = document.querySelector('#neededFunding').value 
-    const name = document.querySelector('#name').value 
-    const description =document.querySelector('#description').value
-    console.log(needed_funding,name,description)
     
     fetch('/api/projects', {
         method: 'POST',
