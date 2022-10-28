@@ -1,7 +1,7 @@
 # toxicity
 
 
-###  A command-line application from scratch to manage a company's employee database.
+ ### A pseudonymous social media application that allows users to post and comment ONLY toxic content for laughs and fun.
 
  ------------------
 
